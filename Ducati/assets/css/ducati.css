@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+header {
+    background: #e60000;
+    padding: 15px 40px;
+    border-bottom: 2px solid white;
+}
+
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contenedor-header img {
+    width: 60px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.contenedor-especificaciones {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.contenedor-descripcion h1 {
+    margin-bottom: 10px;
+    color: #e60000;
+}
+
+.contenedor-descripcion p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+.caracteristica {
+    color: #e60000;
+    font-weight: bold;
+}
+
+.contenedor-modelo {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+model-viewer {
+    width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 900px) {
+    .contenedor-principal {
+        grid-template-columns: 1fr;
+    }
+
+    model-viewer {
+        height: 400px;
+    }
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio // Emmanuel Mata Vázquez</title>
+
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="/PortfolioEMV/assets/css/portfolio.css">
+    <!-- Modelo 3D -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <!-- El overlay y ruido son para crear efectos visuales en el cuerpo de la página -->
+    <div class="overlay"></div>
+    <div class="ruido"></div> 
+
+    <!-- Esto es una terminal de texto animada que muestra un mensaje de bienvenida -->
+    <div class="terminal-uac">
+        <span id="textoTerminal"></span>
+    </div>
+
+    <!-- La barra de navegación contiene el logo, los enlaces a las secciones y un botón para cambiar el tema -->
+    <header class="barra-navegacion">
+        <div class="logo">
+            EMMANUEL<span>PORTFOLIO</span>
+        </div>
+        <nav>
+            <ul class="enlaces-nav">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#arsenal">Habilidades</a></li>
+                <li><a href="#misiones">Misiones</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button id="botonTema">
+            HEAVEN MODE
+        </button>
+    </header>
+
+    <!-- La sección hero es la parte principal de la página, donde se muestra el perfil profesional, un modelo 3D y estadísticas -->
+    <section class="hero" id="inicio">
+
+        <div class="texto-hero">
+            <p class="titulo-pequeno">
+                PERFIL PROFESIONAL
+            </p>
+            <h1>
+                Emmanuel <span>MataVázquez</span>
+            </h1>
+            <h2>
+                TÉCNICO EN SOPORTE Y MANTENIMIENTO DE EQUIPOS DE CÓMPUTO
+            </h2>
+
+            <p class="descripcion">
+                Profesional en formación en Ingeniería Informática, con experiencia en soporte técnico, gestión de datos,
+                atención al cliente y mantenimiento de equipos de cómputo. Experiencia en Microsoft Office, resolución de 
+                problemas, tecnologías de la información y soporte a usuarios.
+            </p>
+
+            <div class="panel-estado">
+                <span>ESTADO: DISPONIBLE</span>
+                <span>INGENIERÍA INFORMÁTICA • 8° SEMESTRE</span>
+            </div>
+
+            <div class="estadisticas">
+                <div class="tarjeta-estadistica">
+                    <h3 id="contadorHabilidades">0</h3>
+                    <p>Habilidades</p>
+                </div>
+
+                <div class="tarjeta-estadistica">
+                    <h3 id="contadorProyectos">0</h3>
+                    <p>Misiones</p>
+                </div>
+
+                <div class="tarjeta-estadistica">
+                    <h3 id="contadorAño">0</h3>
+                    <p>Egreso estimado</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Aqui se muestra un modelo 3D interactivo utilizando la etiqueta <model-viewer> de Google, con opciones para rotar automáticamente, deshabilitar el zoom y configurar la iluminación y el entorno -->
+        <div class="modelo-hero">
+            <model-viewer
+                src="/PortfolioEMV/assets/img/Runa_Pentagrama.glb"
+                alt="Modelo 3D"
+                auto-rotate
+                disable-zoom
+                shadow-intensity="1"
+                exposure="0.7"
+                environment-image="neutral">
+            </model-viewer>
+        </div>
+
+    </section>
+
+    <!-- Esta sección muestra las habilidades profesionales en un formato de tarjetas dentro de una cuadrícula -->
+    <section class="seccion-skills" id="arsenal">
+
+        <h2 class="titulo-seccion">
+            Arsenal de Habilidades
+        </h2>
+        <div class="grid-skills">
+            <div class="tarjeta-skill">
+                <h3>Soporte Técnico</h3>
+                <p>
+                    Diagnóstico y solución de fallas
+                    en software y equipos.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>Microsoft Office</h3>
+                <p>
+                    Excel, Word y herramientas administrativas.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>Python</h3>
+                <p>
+                    Programación y automatización.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>HTML / CSS</h3>
+                <p>
+                    Desarrollo web moderno.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>PHP / SQL</h3>
+                <p>
+                    Gestión y administración de bases de datos.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>Dart / Flutter</h3>
+                <p>
+                    Desarrollo de aplicaciones móviles.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>Cisco Networking</h3>
+                <p>
+                    Redes y hardware.
+                </p>
+            </div>
+            <div class="tarjeta-skill">
+                <h3>Idiomas</h3>
+                <p>
+                  Español (Nativo) • Inglés Básico
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Esta sección muestra los proyectos realizados, organizados en tarjetas dentro de una cuadrícula -->
+    <section class="seccion-proyectos" id="misiones">
+
+        <h2 class="titulo-seccion">
+            Mission Database
+        </h2>
+        <div class="grid-proyectos">
+            <div class="tarjeta-proyecto">
+                <h3>Ticket Online</h3>
+                <p>
+                    Sistema móvil para gestión de boletos de cine.
+                </p>
+            </div>
+            <div class="tarjeta-proyecto">
+                <h3>TecInventory</h3>
+                <p>
+                    Sistema para administración de inventario y productos.
+                </p>
+            </div>
+            <div class="tarjeta-proyecto">
+                <h3>EstudiAmigo</h3>
+                <p>
+                    Aplicación orientada al apoyo estudiantil.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Esta sección muestra la experiencia profesional y formación académica en tarjetas organizadas dentro de una cuadrícula -->
+    <section class="seccion-experiencia" id="experiencia">
+
+        <h2 class="titulo-seccion">
+            Experiencia Profesional
+        </h2>
+        <div class="grid-experiencia">
+            <div class="tarjeta-experiencia">
+                <h3>
+                    AUXILIAR ADMINISTRATIVO / CAPTURISTA
+                </h3>
+                <p>
+                    • Captura y actualización de datos. <br> 
+                    • Uso de Excel y Word. <br>
+                    • Organización y respaldo de información. <br>
+                    • Manejo de sistemas de punto de venta.
+                </p>
+            </div>
+            <div class="tarjeta-experiencia">
+                <h3>
+                    ASESOR DE VENTAS Y SOPORTE TÉCNICO
+                </h3>
+                <p>
+                    • Venta de equipos móviles <br>
+                    • Instalación y configuración de software <br>
+                    • Diagnóstico y solución de fallas <br>
+                    • Respaldo y recuperación de información <br>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Esta sección muestra la formación académica y cursos realizados, organizados en tarjetas dentro de una cuadrícula -->
+    <section class="seccion-experiencia" id="formacion">
+
+        <h2 class="titulo-seccion">
+            Formación Académica y Cursos
+        </h2>
+        <div class="grid-experiencia">
+            <div class="tarjeta-experiencia">
+                <h3>
+                    TÉCNICO EN SOPORTE Y MANTENIMIENTO DE EQUIPOS DE CÓMPUTO
+                </h3>
+                <p>
+                    Centro de Estudios Tecnológicos industrial y de servicios No. 106
+                    <br>
+                    2019 - 2022
+                </p>
+            </div>
+            <div class="tarjeta-experiencia">
+                <h3>
+                    INGENIERÍA INFORMÁTICA
+                </h3>
+                <p>
+                    Instituto Tecnológico Superior de Rioverde
+                    <br>
+                    8° semestre.
+                    <br>
+                    Fecha estimada de egreso: 2027
+                </p>
+            </div>
+            <div class="tarjeta-experiencia">
+                <h3>
+                    CISCO NETWORK ACADEMY
+                </h3>
+                <p>
+                    Conceptos Básicos de Hardware de Computadora
+                    <br>
+                    2025
+                </p>
+            </div>
+            <div class="tarjeta-experiencia">
+                <h3>
+                    CAPACÍTATE PARA EL EMPLEO
+                </h3>
+                <p>
+                    Curador de Datos
+                    <br>
+                    2025
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Esta sección muestra los datos de contacto, incluyendo enlaces a WhatsApp, correo electrónico, LinkedIn, Instagram y GitHub -->
+    <section class="seccion-contacto" id="contacto">
+
+        <h2 class="titulo-seccion">
+            Terminal de Contacto
+        </h2>
+        <div class="contenedor-contacto">
+            <a href="mailto:emmanuel.mata.vz@gmail.com?subject=Hola%20Emmanuel,&body=Me%20gustaría%20ponerme%20en%20contacto%20contigo">
+                <i class="fa-solid fa-envelope"></i> Correo Electrónico
+            </a>
+            <a href="https://www.linkedin.com/in/emmanuel-mata-vázquez-a3048835b">
+                <i class="fa-brands fa-linkedin"></i> Linkedin
+            </a>
+            <a href="https://wa.link/5lrtau">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/pixelluminaty?igsh=cjZvdTVrNDhwb3hr">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+            <a href="https://github.com/Pixelluminaty-Zzz">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Este enlace flotante permite descargar el Curriculum Vitae en formato PDF -->
+    <a href="/PortfolioEMV/assets/pdf/CV-EmmanuelMataVázquez.pdf" 
+        class="boton-flotante">
+        Curriculum Vitae
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Librería para animación de texto -->
+    <script src="/PortfolioEMV/assets/js/portfolio.js"></script> <!-- Archivo JavaScript para funcionalidades adicionales -->
+
+</body>
+
+</html>

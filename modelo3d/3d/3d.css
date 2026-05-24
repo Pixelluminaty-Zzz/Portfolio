@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.contenedor {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    z-index: -1;
+}
+
+.contenido {
+    height: 300vh;
+    padding: 50px;
+    font-family: comic sans ms;
+    color: rgb(23, 153, 173);
+}
+
+model-viewer {
+  --interaction-prompt-display: none;
+  transition: camera-orbit 0.1s ease-out;
+}
