@@ -443,3 +443,11 @@ section{
     }
 
 }
+
+@media (max-width:768px){
+
+  .contenedor-contacto{
+    margin-bottom: 65px;
+  }
+
+}
